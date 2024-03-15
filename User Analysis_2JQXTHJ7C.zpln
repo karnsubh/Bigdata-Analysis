@@ -1,0 +1,734 @@
+﻿{
+  "paragraphs": [
+    {
+      "text": "%pyspark\n\nfrom pyspark import HiveContext\n\nhc = HiveContext(sc)\ndf = hc.table('users')\ndf.show()",
+      "user": "anonymous",
+      "dateUpdated": "2024-03-14T10:24:47+0800",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+--------------------+---------+-----------------+-------------------+--------------------+-----------+----------+---------+---------+--------------------+------------------+-------------------+--------------------+-----------------------+--------------------+--------------------+--------------------+---------------------+--------------------+---------------------+----------------------+----------------------+\n|             user_id|user_name|user_review_count| user_yelping_since|        user_friends|user_useful|user_funny|user_cool|user_fans|          user_elite|user_average_stars|user_compliment_hot|user_compliment_more|user_compliment_profile|user_compliment_cute|user_compliment_list|user_compliment_note|user_compliment_plain|user_compliment_cool|user_compliment_funny|user_compliment_writer|user_compliment_photos|\n+--------------------+---------+-----------------+-------------------+--------------------+-----------+----------+---------+---------+--------------------+------------------+-------------------+--------------------+-----------------------+--------------------+--------------------+--------------------+---------------------+--------------------+---------------------+----------------------+----------------------+\n|qVc8ODYU5SZjKXVBg...|   Walker|              585|2007-01-25 16:47:26|NSCy54eWehBJyZdG2...|       7217|      1259|     5994|      267|                2007|              3.91|                250|                  65|                     55|                  56|                  18|                 232|                  844|                 467|                  467|                   239|                   180|\n|j14WgRoU_-2ZE1aw1...|   Daniel|             4333|2009-01-25 04:35:42|ueRPE0CX75ePGMqOF...|      43091|     13066|    27281|     3138|2009,2010,2011,20...|              3.74|               1145|                 264|                    184|                 157|                 251|                1847|                 7054|                3131|                 3131|                  1521|                  1946|\n|2WnXYQFK0hXEoTxPt...|    Steph|              665|2008-07-25 10:41:00|LuO3Bn4f3rlhyHIaN...|       2086|      1010|     1003|       52|2009,2010,2011,20...|              3.32|                 89|                  13|                     10|                  17|                   3|                  66|                   96|                 119|                  119|                    35|                    18|\n|SZDeASXq7o05mMNLs...|     Gwen|              224|2005-11-29 04:38:33|enx1vVPnfdNUdPho6...|        512|       330|      299|       28|      2009,2010,2011|              4.27|                 24|                   4|                      1|                   6|                   2|                  12|                   16|                  26|                   26|                    10|                     9|\n|hA5lMy-EnncsH4JoR...|    Karen|               79|2007-01-05 19:40:59|PBK4q9KEEBHhFvSXC...|         29|        15|        7|        1|                    |              3.54|                  1|                   1|                      0|                   0|                   0|                   1|                    1|                   0|                    0|                     0|                     0|\n|q_QQ5kBBwlCcbL1s4...|     Jane|             1221|2005-03-14 20:26:35|xBDpTUbai0DXrvxCe...|      14953|      9940|    11211|     1357|2006,2007,2008,20...|              3.85|               1713|                 163|                    191|                 361|                 147|                1212|                 5696|                2543|                 2543|                   815|                   323|\n|cxuxXkcihfCbqt5By...|      Rob|               12|2009-02-24 03:09:06|HDAQ74AEznP-YsMk1...|          6|         1|        0|        1|                    |              2.75|                  0|                   0|                      0|                   0|                   0|                   0|                    1|                   0|                    0|                     0|                     0|\n|E9kcWJdJUHuTKfQur...|     Mike|              358|2008-12-11 22:11:56|y2GyxJF5VQWohxgw_...|        399|       102|      143|       23|                    |              3.73|                  4|                   7|                      2|                   0|                   0|                   8|                    6|                  12|                   12|                     5|                     0|\n|lO1iq-f75hnPNZkTy...| Rachelle|               40|2008-12-29 22:40:56|tOQDlz36rI__SOsbL...|        109|        40|       46|        7|                    |              4.04|                  2|                   0|                      0|                   3|                   0|                   3|                    4|                   5|                    5|                     3|                     1|\n|AUi8MPWJ0mLkMfwbu...|     John|              109|2010-01-07 18:32:04|gy5fWeSv3Gamuq9Ox...|        154|        20|       23|        4|                    |               3.4|                  0|                   0|                      0|                   0|                   0|                   1|                    6|                   3|                    3|                     0|                     0|\n|iYzhPPqnrjJkg1JHZ...|    Chris|                4|2010-11-03 18:59:20|Vq4Pc81l6MWTnc-h4...|          1|         0|        1|        1|                    |               4.0|                  0|                   0|                      0|                   0|                   0|                   0|                    0|                   0|                    0|                     0|                     0|\n|xoZvMJPDW6Q9pDAXI...|     Ryan|              535|2009-05-27 06:12:10|6tbXpUIU6upoeqWND...|       1130|       487|      573|       31| 2009,2010,2011,2012|              3.89|                 23|                   9|                      1|                   3|                   5|                  31|                   41|                  36|                   36|                    24|                     7|\n|vVukUtqoLF5BvH_Vt...| Charlene|               37|2011-01-29 17:18:59|zkK6c9BcDyqreU0fq...|         63|         3|       27|        4|                    |              4.51|                  4|                   0|                      0|                   0|                   0|                   1|                    5|                   0|                    0|                     1|                     0|\n|_crIokUeTCHVK_JVO...|    Kenny|               11|2009-10-07 17:23:44|f0mdrhyxVZ0TsFZD5...|         30|         3|        0|        0|                    |              3.08|                  0|                   0|                      0|                   0|                   0|                   0|                    0|                   0|                    0|                     0|                     0|\n|1McG5Rn_UDkmlkZOr...|   Teresa|                7|2009-05-26 16:11:11|piejMEdRkGB7-1aL4...|         18|         3|       13|        1|                    |              4.29|                  1|                   0|                      0|                   0|                   0|                   1|                    0|                   2|                    2|                     0|                     0|\n|SgiBkhXeqIKl1PlFp...|   Eugene|              682|2006-08-25 16:47:25|j3MBGSLaXMlhLZNeA...|       1819|      1138|     1297|       44|2007,2008,2009,20...|              3.75|                212|                  17|                     17|                  22|                  34|                  67|                  158|                 221|                  221|                    45|                    17|\n|fJZO_skqpnhk1kvom...| Jennifer|               25|2008-07-14 16:01:36|hJiJzw6obCmbGAfwr...|         29|         2|       19|        1|                    |              4.15|                  0|                   1|                      0|                   0|                   0|                   6|                    2|                   2|                    2|                     1|                     0|\n|x7YtLnBW2dUnrrpwa...|  Ronskee|               37|2010-05-06 00:40:56|EPBLDry-ObheloH-N...|         56|        29|       29|        9|                    |              3.84|                 15|                   1|                      0|                   0|                   0|                  12|                   33|                  66|                   66|                     1|                    12|\n|QF1Kuhs8iwLWANNZx...|Catherine|              607|2009-04-27 20:25:54|dLts9bY66tXEFqYG0...|       4573|      3714|     4149|      131|2010,2011,2012,20...|              4.11|               1020|                  79|                     68|                  29|                  23|                 144|                  407|                 808|                  808|                   587|                   723|\n|VcLRGCG_VbAo8MxOm...|       AJ|              133|2009-07-11 16:47:38|Ynu2Z2L8Wv2fbTwQ_...|        201|        52|       44|        4|                    |               3.6|                  1|                   0|                      0|                   0|                   0|                   2|                    4|                   0|                    0|                     1|                     0|\n+--------------------+---------+-----------------+-------------------+--------------------+-----------+----------+---------+---------+--------------------+------------------+-------------------+--------------------+-----------------------+--------------------+--------------------+--------------------+---------------------+--------------------+---------------------+----------------------+----------------------+\nonly showing top 20 rows\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1710383087934_1008998704",
+      "id": "paragraph_1710236391585_267209611",
+      "dateCreated": "2024-03-14T10:24:47+0800",
+      "status": "READY",
+      "focus": true,
+      "$$hashKey": "object:29004"
+    },
+    {
+      "text": "%pyspark\r\n \r\n #1/ Analyze the yearly growth of user sign-ups.\r\n\r\nresult = hc.sql(\"SELECT year(to_date(user_yelping_since)) as year, COUNT(*) FROM users GROUP BY year(to_date(user_yelping_since))\")\r\nz.show(result)",
+      "user": "anonymous",
+      "dateUpdated": "2024-03-14T10:24:47+0800",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "pieChart",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "year": "string",
+                      "count(1)": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                },
+                "multiBarChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                },
+                "stackedAreaChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                },
+                "lineChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                }
+              },
+              "commonSetting": {},
+              "keys": [
+                {
+                  "name": "year",
+                  "index": 0,
+                  "aggr": "sum"
+                }
+              ],
+              "groups": [],
+              "values": [
+                {
+                  "name": "count(1)",
+                  "index": 1,
+                  "aggr": "sum"
+                }
+              ]
+            },
+            "helium": {}
+          },
+          "1": {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "year": "string",
+                      "count(1)": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "year\tcount(1)\n2007\t8574\n2018\t44606\n2015\t100317\n2006\t3144\n2022\t595\n2013\t91608\nnull\t1\n2014\t98661\n2019\t31451\n2004\t40\n2020\t13412\n2012\t88828\n2009\t34035\n2016\t83975\n2005\t577\n2010\t55280\n2011\t84618\n2008\t17011\n2017\t55186\n2021\t10318\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1710383087934_1615896964",
+      "id": "paragraph_1710246909195_1281499486",
+      "dateCreated": "2024-03-14T10:24:47+0800",
+      "status": "READY",
+      "$$hashKey": "object:29005"
+    },
+    {
+      "text": "%pyspark\r\n\r\n#2/ Count the \"review_count\" for users.\r\n\r\n#Count the \"review_count\" for users.   \r\nfrom pyspark import HiveContext\r\nfrom pyspark.sql.functions import year, count, sum\r\nhc = HiveContext(sc)\r\n\r\n# Read the table 'users' from Hive\r\nusers_df = hc.table('users')\r\n\r\n# Calculate the total review count\r\ntotal_review_count = users_df.select(sum(\"user_review_count\")).head()[0]\r\n\r\n# Show the total review count\r\nz.show(total_review_count)\r\n",
+      "user": "anonymous",
+      "dateUpdated": "2024-03-14T10:24:47+0800",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "29933878\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1710383087934_35524060",
+      "id": "paragraph_1710236846743_1786284167",
+      "dateCreated": "2024-03-14T10:24:47+0800",
+      "status": "READY",
+      "$$hashKey": "object:29006"
+    },
+    {
+      "text": "%pyspark\r\n\r\n#5/ Display the yearly proportions of total users and silent users (those who haven't written reviews).\r\n\r\nfrom pyspark import HiveContext\r\nfrom pyspark.sql.functions import year, count, when\r\n\r\n# Create a HiveContext\r\nhc = HiveContext(sc)\r\n\r\n# Read the table 'users' from Hive\r\ndf = hc.table('users')\r\n\r\n# Calculate yearly proportions of total users and silent users\r\nyearly_proportions = df.withColumn(\"signup_year\", year(\"user_yelping_since\")) \\\r\n    .groupBy(\"signup_year\") \\\r\n    .agg(count(\"*\").alias(\"total_users\"),\r\n         (count(when(df.user_review_count == 0, True)) / count(\"*\")).alias(\"silent_user_proportion\")) \\\r\n    .orderBy(\"signup_year\")\r\n\r\n# Show the yearly proportions\r\nz.show(yearly_proportions)",
+      "user": "anonymous",
+      "dateUpdated": "2024-03-14T10:24:47+0800",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "signup_year": "string",
+                      "total_users": "string",
+                      "silent_user_proportion": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                },
+                "multiBarChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                },
+                "stackedAreaChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                }
+              },
+              "commonSetting": {},
+              "keys": [
+                {
+                  "name": "signup_year",
+                  "index": 0,
+                  "aggr": "sum"
+                }
+              ],
+              "groups": [],
+              "values": [
+                {
+                  "name": "total_users",
+                  "index": 1,
+                  "aggr": "sum"
+                }
+              ]
+            },
+            "helium": {}
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "signup_year\ttotal_users\tsilent_user_proportion\nnull\t1\t0.0\n2004\t40\t0.0\n2005\t577\t0.0\n2006\t3144\t0.0\n2007\t8574\t0.0\n2008\t17011\t0.0\n2009\t34035\t0.0\n2010\t55280\t0.0\n2011\t84618\t0.0\n2012\t88828\t2.2515423064799387E-5\n2013\t91608\t1.0916077198497947E-5\n2014\t98661\t0.0\n2015\t100317\t0.0\n2016\t83975\t1.1908306043465317E-5\n2017\t55186\t0.0\n2018\t44606\t6.725552616239968E-5\n2019\t31451\t6.359098279863915E-5\n2020\t13412\t7.456009543692216E-5\n2021\t10318\t2.907540220973057E-4\n2022\t595\t0.0016806722689075631\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1710383087939_1530216747",
+      "id": "paragraph_1710256835441_2138520548",
+      "dateCreated": "2024-03-14T10:24:47+0800",
+      "status": "READY",
+      "$$hashKey": "object:29007"
+    },
+    {
+      "text": "%pyspark\n\n#6/ Summarize the yearly statistics for new users.\n\nfrom pyspark import HiveContext\nfrom pyspark.sql.functions import year, count\n\n# Create a HiveContext\nhc = HiveContext(sc)\n\n# Read the table 'users' from Hive\ndf = hc.table('users')\n\n# Calculate yearly statistics for new users\nyearly_new_users = df.withColumn(\"signup_year\", year(\"user_yelping_since\")) \\\n    .groupBy(\"signup_year\") \\\n    .agg(count(\"*\").alias(\"new_users\")) \\\n    .orderBy(\"signup_year\")\n\n# Show the yearly statistics for new users\nz.show(yearly_new_users)",
+      "user": "anonymous",
+      "dateUpdated": "2024-03-14T10:24:47+0800",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "signup_year": "string",
+                      "new_users": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "signup_year\tnew_users\nnull\t1\n2004\t40\n2005\t577\n2006\t3144\n2007\t8574\n2008\t17011\n2009\t34035\n2010\t55280\n2011\t84618\n2012\t88828\n2013\t91608\n2014\t98661\n2015\t100317\n2016\t83975\n2017\t55186\n2018\t44606\n2019\t31451\n2020\t13412\n2021\t10318\n2022\t595\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1710383087939_1884998357",
+      "id": "paragraph_1710262017875_2080471898",
+      "dateCreated": "2024-03-14T10:24:47+0800",
+      "status": "READY",
+      "$$hashKey": "object:29008"
+    },
+    {
+      "text": "%pyspark\n\n#6/ Summarize the yearly statistics for  review counts\n\nfrom pyspark import HiveContext\nfrom pyspark.sql.functions import year, sum\n\n# Create a HiveContext\nhc = HiveContext(sc)\n\n# Read the table 'users' from Hive\ndf = hc.table('users')\n\n# Calculate yearly statistics for review counts\nyearly_review_counts = df.withColumn(\"signup_year\", year(\"user_yelping_since\")) \\\n    .groupBy(\"signup_year\") \\\n    .agg(sum(\"user_review_count\").alias(\"total_review_count\")) \\\n    .orderBy(\"signup_year\")\n\n# Show the yearly statistics for review counts\nz.show(yearly_review_counts)",
+      "user": "anonymous",
+      "dateUpdated": "2024-03-14T10:24:47+0800",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "signup_year": "string",
+                      "total_review_count": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "signup_year\ttotal_review_count\nnull\tnull\n2004\t8768\n2005\t177787\n2006\t694928\n2007\t1491137\n2008\t2312701\n2009\t3179462\n2010\t3763630\n2011\t4200433\n2012\t3400735\n2013\t2920358\n2014\t2565446\n2015\t2102444\n2016\t1417582\n2017\t807417\n2018\t486860\n2019\t269350\n2020\t89319\n2021\t44479\n2022\t1042\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1710383087942_107315655",
+      "id": "paragraph_1710262661282_219877862",
+      "dateCreated": "2024-03-14T10:24:47+0800",
+      "status": "READY",
+      "$$hashKey": "object:29009"
+    },
+    {
+      "text": "%pyspark\n\n#4/ Calculate the ratio of elite users to regular users each year.\n\nfrom pyspark import HiveContext\nfrom pyspark.sql.functions import year, count, when, col\n\n# Create a HiveContext\nhc = HiveContext(sc)\n\n# Read the table 'users' from Hive\ndf = hc.table('users')\n\n# Calculate the total number of elite users and regular users each year\nyearly_user_counts = df.withColumn(\"signup_year\", year(\"user_yelping_since\")) \\\n    .groupBy(\"signup_year\") \\\n    .agg(count(when(df.user_elite == \"Y\", True)).alias(\"elite_users\"),\n         (count(\"*\") - count(when(df.user_elite == \"Y\", True))).alias(\"regular_users\")) \\\n    .orderBy(\"signup_year\")\n\n# Calculate the ratio of elite users to regular users each year\nyearly_user_ratio = yearly_user_counts.withColumn(\"elite_to_regular_ratio\", \n                                                  col(\"elite_users\") / col(\"regular_users\"))\n\n# Show the yearly ratio of elite users to regular users\nz.show(yearly_user_ratio)",
+      "user": "anonymous",
+      "dateUpdated": "2024-03-14T10:24:47+0800",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "signup_year": "string",
+                      "elite_users": "string",
+                      "regular_users": "string",
+                      "elite_to_regular_ratio": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "signup_year\telite_users\tregular_users\telite_to_regular_ratio\nnull\t0\t1\t0.0\n2004\t0\t40\t0.0\n2005\t0\t577\t0.0\n2006\t0\t3144\t0.0\n2007\t0\t8574\t0.0\n2008\t0\t17011\t0.0\n2009\t0\t34035\t0.0\n2010\t0\t55280\t0.0\n2011\t0\t84618\t0.0\n2012\t0\t88828\t0.0\n2013\t0\t91608\t0.0\n2014\t0\t98661\t0.0\n2015\t0\t100317\t0.0\n2016\t0\t83975\t0.0\n2017\t0\t55186\t0.0\n2018\t0\t44606\t0.0\n2019\t0\t31451\t0.0\n2020\t0\t13412\t0.0\n2021\t0\t10318\t0.0\n2022\t0\t595\t0.0\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1710383087942_295004272",
+      "id": "paragraph_1710262807879_1824267015",
+      "dateCreated": "2024-03-14T10:24:47+0800",
+      "status": "READY",
+      "$$hashKey": "object:29010"
+    },
+    {
+      "text": "%pyspark\n#6/ Summarize the yearly statistics for yearly tip counts\n\nfrom pyspark import HiveContext\nfrom pyspark.sql.functions import year, sum\n\n# Create a HiveContext\nhc = HiveContext(sc)\n\n# Read the table 'users' from Hive\ndf = hc.table('users')\n\n\n# Calculate yearly statistics for tip counts\nyearly_tip_counts = df.withColumn(\"signup_year\", year(\"user_yelping_since\")) \\\n    .groupBy(\"signup_year\") \\\n    .agg(sum(\"user_review_count\").alias(\"total_tip_count\")) \\\n    .orderBy(\"signup_year\")\n\n# Show the yearly statistics for tip counts using z.show()\nz.show(yearly_tip_counts)",
+      "user": "anonymous",
+      "dateUpdated": "2024-03-14T10:24:47+0800",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "signup_year": "string",
+                      "total_tip_count": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          },
+          "1": {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "signup_year": "string",
+                      "total_tip_count": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "signup_year\ttotal_tip_count\nnull\tnull\n2004\t8768\n2005\t177787\n2006\t694928\n2007\t1491137\n2008\t2312701\n2009\t3179462\n2010\t3763630\n2011\t4200433\n2012\t3400735\n2013\t2920358\n2014\t2565446\n2015\t2102444\n2016\t1417582\n2017\t807417\n2018\t486860\n2019\t269350\n2020\t89319\n2021\t44479\n2022\t1042\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1710383087943_1141362953",
+      "id": "paragraph_1710263970323_1708119439",
+      "dateCreated": "2024-03-14T10:24:47+0800",
+      "status": "READY",
+      "$$hashKey": "object:29011"
+    },
+    {
+      "text": "%pyspark\n#6/ Summarize the yearly statistics for check-in counts\n\nfrom pyspark import HiveContext\nfrom pyspark.sql.functions import year, sum\n\n# Create a HiveContext\nhc = HiveContext(sc)\n\n# Read the table 'users' from Hive\ndf = hc.table('users')\n\n# Calculate yearly statistics for check-in counts\nyearly_checkin_counts = df.withColumn(\"signup_year\", year(\"user_yelping_since\")) \\\n    .groupBy(\"signup_year\") \\\n    .agg(sum(\"user_review_count\").alias(\"total_checkin_count\")) \\\n    .orderBy(\"signup_year\")\n\n# Show the yearly statistics for check-in counts using z.show()\nz.show(yearly_checkin_counts)\n",
+      "user": "anonymous",
+      "dateUpdated": "2024-03-14T10:24:47+0800",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "signup_year": "string",
+                      "total_checkin_count": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "signup_year\ttotal_checkin_count\nnull\tnull\n2004\t8768\n2005\t177787\n2006\t694928\n2007\t1491137\n2008\t2312701\n2009\t3179462\n2010\t3763630\n2011\t4200433\n2012\t3400735\n2013\t2920358\n2014\t2565446\n2015\t2102444\n2016\t1417582\n2017\t807417\n2018\t486860\n2019\t269350\n2020\t89319\n2021\t44479\n2022\t1042\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1710383087943_730244205",
+      "id": "paragraph_1710264111743_1180278399",
+      "dateCreated": "2024-03-14T10:24:47+0800",
+      "status": "READY",
+      "$$hashKey": "object:29012"
+    },
+    {
+      "text": "%pyspark\n",
+      "user": "anonymous",
+      "dateUpdated": "2024-03-14T10:24:47+0800",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1710383087945_2054540430",
+      "id": "paragraph_1710264490482_1265013305",
+      "dateCreated": "2024-03-14T10:24:47+0800",
+      "status": "READY",
+      "$$hashKey": "object:29013"
+    }
+  ],
+  "name": "User Analysis",
+  "id": "2JQXTHJ7C",
+  "defaultInterpreterGroup": "spark",
+  "version": "0.10.1",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {},
+  "config": {
+    "isZeppelinNotebookCronEnable": false,
+    "looknfeel": "default",
+    "personalizedMode": "false"
+  },
+  "info": {},
+  "path": "/User Analysis"
+}
